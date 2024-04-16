@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace Common.Repository.SqlServer
+namespace Common.Repository.Sql
 {
     internal sealed class SqlUnitOfWork(DbContext dbContext) : ISqlUnitOfWork
     {

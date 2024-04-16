@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Repository", "src\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Repository.MongoDB", "src\Common.Repository.MongoDB\Common.Repository.MongoDB.csproj", "{D34D2254-328D-488F-B70A-1CC89A12F3F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Repository.SqlServer", "src\Common.Repository.SqlServer\Common.Repository.SqlServer.csproj", "{7B68B71F-A4B3-49C1-BD85-18628F8EA8DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Repository.Sql", "src\Common.Repository.Sql\Common.Repository.Sql.csproj", "{7B68B71F-A4B3-49C1-BD85-18628F8EA8DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

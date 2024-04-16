@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Common.Repository.SqlServer
+namespace Common.Repository.Sql
 {
     public static class Configuration
     {

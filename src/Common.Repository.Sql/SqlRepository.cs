@@ -1,7 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 
-namespace Common.Repository.SqlServer
+namespace Common.Repository.Sql
 {
     internal sealed class SqlRepository<T>(DbContext dbContext) : ICommonRepository<T>
         where T : Entity

@@ -1,4 +1,4 @@
-namespace Common.Repository.SqlServer
+namespace Common.Repository.Sql
 {
     public interface ISqlUnitOfWork : IUnitOfWork
     {
