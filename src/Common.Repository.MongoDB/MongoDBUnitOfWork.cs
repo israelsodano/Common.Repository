@@ -2,8 +2,8 @@ using MongoDB.Driver;
 
 namespace Common.Repository.MongoDB
 {
-    public class MongoDBUnitOfWork(IMongoClient client, 
-                                   IClientSessionHandle session) : IMongoUnitOfWork
+    internal sealed class MongoDBUnitOfWork(IMongoClient client,
+                                            IClientSessionHandle session) : IMongoUnitOfWork
     {
         private readonly IMongoClient _client = client;
         private readonly List<Action> _actions = [];
@@ -11,11 +11,11 @@ namespace Common.Repository.MongoDB
 
         public void BeginTransaction()
         {
-            if (_session.IsInTransaction) 
+            if (_session.IsInTransaction)
                 throw new NotSupportedException(Errors.ALREADY_INICIATED_TRANSACTION);
             _session.StartTransaction();
         }
-            
+
         public void CommitTransaction()
         {
             using (_session)

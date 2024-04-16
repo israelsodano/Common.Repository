@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Common.Repository.SqlServer
 {
-    public class SqlServerUnitOfWork(DbContext dbContext) : ISqlServerUnitOfWork
+    internal sealed class SqlUnitOfWork(DbContext dbContext) : ISqlUnitOfWork
     {
         private readonly DbContext _dbContext = dbContext;
         private IDbContextTransaction _dbContextTransaction;

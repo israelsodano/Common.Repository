@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Common.Repository.SqlServer
 {
-    public sealed class SqlServerRepository<T>(DbContext dbContext) : ICommonRepository<T> 
+    internal sealed class SqlRepository<T>(DbContext dbContext) : ICommonRepository<T>
         where T : Entity
     {
         private readonly DbContext _dbContext = dbContext;
@@ -13,11 +13,14 @@ namespace Common.Repository.SqlServer
             _dbset.Where(predicate)
                     .AsNoTracking();
 
+        public IQueryable<T> GetAll() =>
+            _dbset.AsNoTracking();
+
         public T GetFirstOrDefault(Expression<Func<T, bool>> predicate) =>
             _dbset.AsNoTracking()
                 .FirstOrDefault(predicate);
 
-        public void Add(T entity) => 
+        public void Add(T entity) =>
             _dbset.Add(entity);
 
         public void Add(IEnumerable<T> entities) =>

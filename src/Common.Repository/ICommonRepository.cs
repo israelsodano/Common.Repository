@@ -2,9 +2,10 @@ using System.Linq.Expressions;
 
 namespace Common.Repository
 {
-    public interface ICommonRepository<T> 
+    public interface ICommonRepository<T>
         where T : Entity
     {
+        IQueryable<T> GetAll();
         IQueryable<T> GetAll(Expression<Func<T, bool>> predicate);
         T GetFirstOrDefault(Expression<Func<T, bool>> predicate);
         void Add(T entity);
